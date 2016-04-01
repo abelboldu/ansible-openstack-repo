@@ -10,7 +10,6 @@
         state: present
       when: ansible_os_family == 'Debian'
 
-  post_tasks:
     - name: Install keystone package (RedHat)
       yum:
         name: openstack-keystone
