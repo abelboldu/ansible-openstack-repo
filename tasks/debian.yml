@@ -1,6 +1,7 @@
 ---
 
 - name: Add Ubuntu Cloud Archive
-  apt_repository: repo='cloud-archive:{{ openstack_version }}'
-  state: present
-  update_cache: yes
+  apt_repository:
+   repo: cloud-archive:{{ openstack_version }}
+   state: present
+   update_cache: yes
