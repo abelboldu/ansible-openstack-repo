@@ -6,5 +6,5 @@
 - include: debian.yml
   when: ansible_os_family == 'Debian'
 
-- include: debian.yml
+- include: suse.yml
   when: ansible_os_family == 'Suse'
