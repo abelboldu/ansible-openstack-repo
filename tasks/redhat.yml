@@ -1,4 +1,7 @@
 ---
 
+- name: Add CentOS SIG Cloud key
+  rpm_key: state=present key=RPM-GPG-KEY-CentOS-SIG-Cloud
+  
 - name: Add RDO repository
   template: src=rdo.repo.j2 dest=/etc/yum.repos.d/rdo.repo

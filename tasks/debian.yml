@@ -1,5 +1,10 @@
 ---
 
+- name: Add openstack cloud ring
+  apt:
+    name: ubuntu-cloud-keyring
+    state: present
+
 - name: Add Ubuntu Cloud Archive
   apt_repository:
    repo: 'deb http://ubuntu-cloud.archive.canonical.com/ubuntu {{ ansible_distribution_release }}-updates/{{ openstack_version }} main'
