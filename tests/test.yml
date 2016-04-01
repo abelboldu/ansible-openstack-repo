@@ -1,0 +1,18 @@
+---
+- hosts: all
+  roles:
+    - role_under_test
+
+  post_tasks:
+    - name: Install keystone package (Debian)
+      apt:
+        name: keystone
+        state: present
+      when: ansible_os_family == 'Debian'
+
+  post_tasks:
+    - name: Install keystone package (RedHat)
+      yum:
+        name: openstack-keystone
+        state: present
+      when: ansible_os_family == 'Debian'
