@@ -2,6 +2,6 @@
 
 - name: Add Ubuntu Cloud Archive
   apt_repository:
-   repo: cloud-archive:{{ openstack_version }}
+   repo: 'deb http://ubuntu-cloud.archive.canonical.com/ubuntu {{ ansible_distribution_release }}-updates/{{ openstack_version }} main'
    state: present
    update_cache: yes
