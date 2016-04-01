@@ -5,6 +5,3 @@
 
 - include: debian.yml
   when: ansible_os_family == 'Debian'
-
-- name: Add RDO repository
-  template: src=rdo.repo.j2 dest=/etc/yum.repos.d/rdo.repo
