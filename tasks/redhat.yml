@@ -8,7 +8,7 @@
     mode: 644
 
 - name: Import CentOS SIG Cloud key
-  rpm_key: state=present key=764429E6
+  rpm_key: state=present key=/etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
 
 - name: Add RDO repository
   template: src=rdo.repo.j2 dest=/etc/yum.repos.d/rdo.repo
