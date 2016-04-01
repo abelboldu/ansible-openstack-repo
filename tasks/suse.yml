@@ -1,0 +1,15 @@
+---
+
+- name: Add Openstack Repo (openSUSE)
+  zypper_repository:
+    name: Openstack-{{ openstack_version.do_capitalize() }}
+    repo: http://download.opensuse.org/repositories/Cloud:/OpenStack:/{{ openstack_version.do_capitalize() }}/openSUSE_{{ ansible_distribution_version }}
+    state: present
+  when: ansible_distribution == "openSUSE"
+
+- name: Add Openstack Repo (SLES)
+  zypper_repository:
+    name: Openstack-{{ openstack_version.do_capitalize() }}
+    repo: http://download.opensuse.org/repositories/Cloud:/OpenStack:/{{ openstack_version.do_capitalize() }}/SLE_{{ ansible_distribution_version }}
+    state: present
+  when: ansible_distribution == "SLES"
