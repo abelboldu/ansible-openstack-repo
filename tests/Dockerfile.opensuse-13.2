@@ -13,6 +13,9 @@ RUN zypper  --no-gpg-checks --gpg-auto-import-keys addrepo http://download.opens
 # Install Ansible
 RUN zypper --gpg-auto-import-keys --non-interactive install git ansible sudo
 
+# repo  check
+RUN zypper lr
+
 # Install Ansible inventory file
 RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 

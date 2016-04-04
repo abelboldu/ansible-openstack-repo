@@ -17,7 +17,7 @@
       when: ansible_os_family == 'RedHat'
 
     - name: Install keystone package (Suse)
-      zypper:
-        name: openstack-keystone
-        state: present
+      command: zypper --gpg-auto-import-keys --non-interactive install openstack-keystone
+      args:
+       creates: /etc/keystone/keystone.conf
       when: ansible_os_family == 'Suse'
