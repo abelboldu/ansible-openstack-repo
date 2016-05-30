@@ -1,5 +1,5 @@
-rdo
-=========
+openstack-repos
+===============
 
 Ansible role to add Openstack  repositories.
 
@@ -16,7 +16,7 @@ Role Variables
 
 Just define openstack version codename:
 
-    openstack_version: liberty
+    openstack_version: mitaka
 
 
 Example Playbook
@@ -25,7 +25,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: abelboldu.openstack-repo , openstack_version: liberty  }
+         - { role: abelboldu.openstack-repo , openstack_version: mitaka }
 
 License
 -------
