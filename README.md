@@ -25,7 +25,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: abelboldu.openstack-repos , openstack_version: liberty  }
+         - { role: abelboldu.openstack-repo , openstack_version: liberty  }
 
 License
 -------
