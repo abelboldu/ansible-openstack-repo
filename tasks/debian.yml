@@ -10,3 +10,4 @@
    repo: 'deb http://ubuntu-cloud.archive.canonical.com/ubuntu {{ ansible_distribution_release }}-updates/{{ openstack_version }} main'
    state: present
    update_cache: yes
+  when: openstack_repo_ubuntu_builtin_releases.{{ ansible_distribution_release }} != '{{ openstack_version }}'

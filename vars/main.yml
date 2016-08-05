@@ -1,2 +1,6 @@
 ---
 # vars file for rdo
+
+openstack_repo_ubuntu_builtin_releases:
+  trusty: "icehouse"
+  xenial: "mitaka"
